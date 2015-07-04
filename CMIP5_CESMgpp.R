@@ -71,7 +71,7 @@ for (j in 1:val){
   dat=raster(dat)
   e <- extent(min(cvar$lon), max(cvar$lon), min(cvar$lat), max(cvar$lat))
   extent(dat) <- e
-  print(j)
+#   print(j)
   if (j==1){
     var=dat
   }else{

@@ -8,13 +8,13 @@
 #start with a clean slate
 rm(list=ls(all=TRUE))
 
-#get the right packages
-install.packages('RCMIP5')
-install.packages('ncdf')
-install.packages('raster')
-install.packages('rgeos')
-install.packages('rgdal')
-install.packages('sp')
+# #get the right packages
+# install.packages('RCMIP5')
+# install.packages('ncdf')
+# install.packages('raster')
+# install.packages('rgeos')
+# install.packages('rgdal')
+# install.packages('sp')
 
 #load libraries
 library(RCMIP5)
@@ -35,7 +35,7 @@ num=1
 assign(paste('model',num,sep=''),model)
 
 #telling RCMIP5 where your files are and check metadata
-mypath <- paste("C:/Users/sivory/Documents/R/recal/",model,'/',run, sep='')
+mypath <- paste("/recal/",model,'/',run, sep='')
 c5files <- getFileInfo(mypath)
 co2files <- subset(c5files, variable==var1);co2filechk <- checkTimePeriod(co2files)
 
